@@ -25,7 +25,8 @@ import app.grapheneos.camera.ui.showIgnoringShortEdgeMode
 import app.grapheneos.camera.util.printStackTraceToString
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 
-private const val imageFileFormat = ".jpg"
+private val imageFileFormat: String
+    get() = if (camConfig.quantumVisionMode && camConfig.rawCaptureFormat) ".dng" else ".jpg"
 
 class ImageCapturer(val mActivity: MainActivity) {
     val camConfig = mActivity.camConfig

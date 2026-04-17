@@ -108,6 +108,9 @@ class CamConfig(private val mActivity: MainActivity) {
             const val PHOTO_QUALITY = "photo_quality"
 
             const val REMOVE_EXIF_AFTER_CAPTURE = "remove_exif_after_capture"
+            const val QUANTUM_VISION_MODE = "quantum_vision_mode"
+            const val RAW_CAPTURE_FORMAT = "raw_capture_format"
+            const val EXTENDED_SPECTRUM = "extended_spectrum"
 
             const val GYROSCOPE_SUGGESTIONS = "gyroscope_suggestions"
 
@@ -143,6 +146,9 @@ class CamConfig(private val mActivity: MainActivity) {
             const val INCLUDE_AUDIO = true
 
             const val ENABLE_EIS = true
+            const val QUANTUM_VISION_MODE = true
+            const val RAW_CAPTURE_FORMAT = true
+            const val EXTENDED_SPECTRUM = true
 
             const val SCAN_ALL_CODES = false
 
