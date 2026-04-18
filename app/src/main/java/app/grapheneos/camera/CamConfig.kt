@@ -571,6 +571,45 @@ class CamConfig(private val mActivity: MainActivity) {
             editor.apply()
         }
 
+    var quantumVisionMode: Boolean
+        get() {
+            return commonPref.getBoolean(
+                SettingValues.Key.QUANTUM_VISION_MODE,
+                SettingValues.Default.QUANTUM_VISION_MODE
+            )
+        }
+        set(value) {
+            val editor = commonPref.edit()
+            editor.putBoolean(SettingValues.Key.QUANTUM_VISION_MODE, value)
+            editor.apply()
+        }
+
+    var rawCaptureFormat: Boolean
+        get() {
+            return commonPref.getBoolean(
+                SettingValues.Key.RAW_CAPTURE_FORMAT,
+                SettingValues.Default.RAW_CAPTURE_FORMAT
+            )
+        }
+        set(value) {
+            val editor = commonPref.edit()
+            editor.putBoolean(SettingValues.Key.RAW_CAPTURE_FORMAT, value)
+            editor.apply()
+        }
+
+    var extendedSpectrum: Boolean
+        get() {
+            return commonPref.getBoolean(
+                SettingValues.Key.EXTENDED_SPECTRUM,
+                SettingValues.Default.EXTENDED_SPECTRUM
+            )
+        }
+        set(value) {
+            val editor = commonPref.edit()
+            editor.putBoolean(SettingValues.Key.EXTENDED_SPECTRUM, value)
+            editor.apply()
+        }
+
     val isZslSupported : Boolean by lazy {
         camera!!.cameraInfo.isZslSupported
     }
