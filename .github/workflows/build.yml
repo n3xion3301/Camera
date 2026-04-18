@@ -14,5 +14,7 @@ jobs:
           distribution: 'temurin'
           java-version: 21
           cache: gradle
+      - name: Clean build
+        run: ./gradlew clean --no-daemon
       - name: Build with Gradle
-        run: ./gradlew build --no-daemon
+        run: ./gradlew assembleDebug --no-daemon
