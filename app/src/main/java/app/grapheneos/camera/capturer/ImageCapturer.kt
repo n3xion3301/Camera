@@ -106,6 +106,7 @@ class ImageCapturer(val mActivity: MainActivity) {
 
         currentImageSaver = imageSaver
 
+        Log.i(TAG, "Capturing image: format=$imageFileFormat, quantumMode=${camConfig.quantumVisionMode}, rawCapture=${camConfig.rawCaptureFormat}, extendedSpectrum=${camConfig.extendedSpectrum}")
         imageCapture.takePicture(ImageSaver.imageCaptureCallbackExecutor, imageSaver)
         fadeCaptureButton()
     }
